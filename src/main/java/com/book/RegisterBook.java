@@ -23,13 +23,15 @@ public class RegisterBook extends HttpServlet {
 
         out.println("<html><head><title>Book Registration</title>");
         out.println("<style>");
-        out.println("body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 20px; }");
-        out.println("h1 { text-align: center; color: #333; }");
-        out.println(".container { max-width: 500px; margin: auto; padding: 20px; background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; }");
-        out.println(".message { text-align: center; margin-bottom: 20px; }");
-        out.println(".buttons { display: flex; justify-content: center; gap: 10px; }");
-        out.println("a { display: inline-block; padding: 10px 20px; background: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 4px; transition: background 0.3s; }");
-        out.println("a:hover { background: #45a049; }");
+        out.println("body { font-family: 'Roboto', sans-serif; background-color: #e9ecef; margin: 0; padding: 20px; }");
+        out.println("h1 { text-align: center; color: #495057; margin-bottom: 20px; }");
+        out.println(".container { max-width: 600px; margin: auto; padding: 20px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }");
+        out.println(".message { text-align: center; padding: 15px; border-radius: 4px; font-size: 18px; margin-bottom: 20px; }");
+        out.println(".success { background-color: #d4edda; color: #155724; }");
+        out.println(".error { background-color: #f8d7da; color: #721c24; }");
+        out.println(".buttons { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }");
+        out.println("a { display: inline-block; padding: 12px 24px; background: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 4px; transition: background 0.3s; }");
+        out.println("a:hover { background: #0056b3; }");
         out.println("</style>");
         out.println("</head><body>");
 
@@ -53,9 +55,9 @@ public class RegisterBook extends HttpServlet {
 
             out.println("<div class='container'>");
             if (count == 1) {
-                out.print("<h1 class='message'>RECORD IS REGISTERED SUCCESSFULLY</h1>");
+                out.println("<h1 class='message success'>Record Registered Successfully</h1>");
             } else {
-                out.print("<h1 class='message'>RECORD NOT REGISTERED SUCCESSFULLY</h1>");
+                out.println("<h1 class='message error'>Record Not Registered</h1>");
             }
             out.println("<div class='buttons'>");
             out.println("<a href='booklist'>View Book List</a>");
@@ -64,10 +66,10 @@ public class RegisterBook extends HttpServlet {
             out.println("</div>");
         } catch (SQLException e) {
             e.printStackTrace();
-            out.println("<div class='container'><h1 class='message'>" + e.getMessage() + "</h1></div>");
+            out.println("<div class='container'><h1 class='message error'>" + e.getMessage() + "</h1></div>");
         } catch (Exception e) {
             e.printStackTrace();
-            out.println("<div class='container'><h1 class='message'>" + e.getMessage() + "</h1></div>");
+            out.println("<div class='container'><h1 class='message error'>" + e.getMessage() + "</h1></div>");
         }
         out.println("</body></html>");
     }

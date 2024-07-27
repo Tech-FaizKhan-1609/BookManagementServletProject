@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/editurl")
 public class EditBook extends HttpServlet {
-    private final static String Query = "Update book_data set bookName=?,bookEdition=?,bookPrice=? where id=?";
+    private final static String Query = "Update book_data set bookName=?, bookEdition=?, bookPrice=? where id=?";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -41,18 +41,19 @@ public class EditBook extends HttpServlet {
 
             out.println("<html><head><title>Edit Book</title>");
             out.println("<style>");
-            out.println("body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 20px; }");
+            out.println("body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; margin: 0; padding: 20px; }");
             out.println("h1 { text-align: center; color: #333; margin-bottom: 20px; }");
             out.println(".container { max-width: 800px; margin: auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }");
-            out.println("form { display: flex; flex-direction: column; }");
-            out.println("label { margin-bottom: 10px; color: #333; font-weight: bold; }");
-            out.println("input[type='text'], input[type='submit'], input[type='reset'] { padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }");
-            out.println("input[type='submit'], input[type='reset'] { background-color: #4CAF50; color: white; border: none; cursor: pointer; transition: background-color 0.3s; }");
-            out.println("input[type='submit']:hover, input[type='reset']:hover { background-color: #45a049; }");
-            out.println("table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }");
-            out.println("td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }");
-            out.println("a { display: inline-block; padding: 10px 20px; background: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 4px; transition: background 0.3s; margin-top: 20px; }");
-            out.println("a:hover { background: #45a049; }");
+            out.println("form { display: flex; flex-direction: column; gap: 15px; }");
+            out.println("label { color: #333; font-weight: bold; font-size: 16px; }");
+            out.println("input[type='text'] { padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }");
+            out.println("input[type='submit'], input[type='reset'] { padding: 12px; border: none; border-radius: 4px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s; }");
+            out.println("input[type='submit'] { background-color: #4CAF50; }");
+            out.println("input[type='submit']:hover { background-color: #45a049; }");
+            out.println("input[type='reset'] { background-color: #f44336; }");
+            out.println("input[type='reset']:hover { background-color: #e53935; }");
+            out.println("a { display: inline-block; padding: 12px 20px; margin-top: 20px; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 4px; transition: background-color 0.3s; }");
+            out.println("a:hover { background-color: #0056b3; }");
             out.println("</style>");
             out.println("</head><body>");
             out.println("<div class='container'>");
@@ -68,16 +69,16 @@ public class EditBook extends HttpServlet {
                 ps.setInt(4, id);
                 int count = ps.executeUpdate();
                 if (count == 1) {
-                    out.println("<h1>Record is Updated Successfully</h1>");
+                    out.println("<h2 style='text-align: center; color: #4CAF50;'>Record Updated Successfully</h2>");
                 } else {
-                    out.println("<h1>Record is Not Updated Successfully</h1>");
+                    out.println("<h2 style='text-align: center; color: #f44336;'>Record Not Updated</h2>");
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-                out.print("<h1>" + e.getMessage() + "</h1>");
+                out.print("<h2 style='text-align: center; color: #f44336;'>" + e.getMessage() + "</h2>");
             } catch (Exception e) {
                 e.printStackTrace();
-                out.print("<h1>" + e.getMessage() + "</h1>");
+                out.print("<h2 style='text-align: center; color: #f44336;'>" + e.getMessage() + "</h2>");
             }
             out.println("<a href='home.html'>Home</a>");
             out.println("<a href='booklist'>Book List</a>");
@@ -86,7 +87,7 @@ public class EditBook extends HttpServlet {
 
         } catch (NumberFormatException e) {
             out.println("<html><head><title>Edit Book</title></head><body>");
-            out.println("<h1>Invalid input. Please enter valid numbers for id and price.</h1>");
+            out.println("<h1 style='text-align: center; color: #f44336;'>Invalid input. Please enter valid numbers for id and price.</h1>");
             out.println("<a href='booklist'>Book List</a>");
             out.println("</body></html>");
         }
