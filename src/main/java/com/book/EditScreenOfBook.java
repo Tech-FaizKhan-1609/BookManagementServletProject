@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/editScreen")
-public class EditScreen extends HttpServlet {
+public class EditScreenOfBook extends HttpServlet {
     private final static String Query = "Select * From book_data where id=?";
 
     @Override
