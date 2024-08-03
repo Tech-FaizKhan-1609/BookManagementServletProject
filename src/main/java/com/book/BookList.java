@@ -24,15 +24,15 @@ public class BookList extends HttpServlet {
 
         out.println("<html><head><title>Book List</title>");
         out.println("<style>");
-        out.println("body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f7f9fc; margin: 0; padding: 0; }");
-        out.println("h1 { text-align: center; color: #333; margin: 20px 0; }");
-        out.println(".container { max-width: 900px; margin: auto; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); }");
-        out.println("table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }");
-        out.println("th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }");
-        out.println("th { background-color: #007bff; color: white; }");
+        out.println("body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f7f9fc; margin: 0; padding: 0; font-variant: small-caps; }");
+        out.println("h1 { text-align: center;font-variant:small-caps; color: #333; margin: 20px 0; }");
+        out.println(".container { max-width: 900px;font-variant:small-caps; margin: auto; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); }");
+        out.println("table { width: 100%;font-variant:small-caps; border-collapse: collapse; margin-bottom: 20px; }");
+        out.println("th, td { padding: 12px 15px;font-variant:small-caps; text-align: left; border-bottom: 1px solid #ddd; }");
+        out.println("th { background-color: #007bff;font-variant:small-caps; color: white; }");
         out.println("tr:nth-child(even) { background-color: #f9f9f9; }");
         out.println("tr:hover { background-color: #f1f1f1; }");
-        out.println("a { color: #007bff; text-decoration: none; padding: 8px 12px; border: 1px solid #007bff; border-radius: 4px; transition: background-color 0.3s, color 0.3s; }");
+        out.println("a { color: #007bff;font-variant:small-caps; text-decoration: none; padding: 8px 12px; border: 1px solid #007bff; border-radius: 4px; transition: background-color 0.3s, color 0.3s; }");
         out.println("a:hover { background-color: #0056b3; color: white; }");
         out.println(".btn-home { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }");
         out.println(".btn-home:hover { background-color: #218838; }");

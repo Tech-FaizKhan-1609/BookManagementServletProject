@@ -26,18 +26,18 @@ public class EditScreenOfBook extends HttpServlet {
 
         out.println("<html><head><title>Edit Book</title>");
         out.println("<style>");
-        out.println("body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #e9ecef; margin: 0; padding: 20px; }");
-        out.println("h1 { text-align: center; color: #343a40; margin-bottom: 20px; }");
-        out.println(".container { max-width: 700px; margin: auto; padding: 30px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }");
-        out.println("form { display: flex; flex-direction: column; gap: 15px; }");
-        out.println("label { color: #495057; font-weight: 600; font-size: 16px; }");
-        out.println("input[type='text'] { padding: 12px; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; }");
-        out.println("input[type='submit'], input[type='reset'] { padding: 12px; border: none; border-radius: 4px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s; }");
+        out.println("body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-variant:small-caps;background-color: #e9ecef; margin: 0; padding: 20px; }");
+        out.println("h1 { text-align: center;font-variant:small-caps; color: #343a40; margin-bottom: 20px; }");
+        out.println(".container { max-width: 700px; margin: auto;font-variant:small-caps; padding: 30px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }");
+        out.println("form { display: flex;font-variant:small-caps; flex-direction: column; gap: 15px; }");
+        out.println("label { color: #495057;font-variant:small-caps; font-weight: 600; font-size: 16px; }");
+        out.println("input[type='text'] { padding: 12px;font-variant:small-caps; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; }");
+        out.println("input[type='submit'], input[type='reset'] { padding: 12px; font-variant:small-caps;border: none; border-radius: 4px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s; }");
         out.println("input[type='submit'] { background-color: #28a745; }");
         out.println("input[type='submit']:hover { background-color: #218838; }");
         out.println("input[type='reset'] { background-color: #dc3545; }");
         out.println("input[type='reset']:hover { background-color: #c82333; }");
-        out.println("a { display: inline-block; padding: 12px 20px; margin-top: 20px; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 4px; transition: background-color 0.3s; }");
+        out.println("a { display: inline-block;font-variant:small-caps; padding: 12px 20px; margin-top: 20px; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 4px; transition: background-color 0.3s; }");
         out.println("a:hover { background-color: #0056b3; }");
         out.println("</style>");
         out.println("</head><body>");

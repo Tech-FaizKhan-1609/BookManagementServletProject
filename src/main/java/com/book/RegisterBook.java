@@ -23,14 +23,14 @@ public class RegisterBook extends HttpServlet {
 
         out.println("<html><head><title>Book Registration</title>");
         out.println("<style>");
-        out.println("body { font-family: 'Roboto', sans-serif; background-color: #e9ecef; margin: 0; padding: 20px; }");
-        out.println("h1 { text-align: center; color: #495057; margin-bottom: 20px; }");
-        out.println(".container { max-width: 600px; margin: auto; padding: 20px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }");
-        out.println(".message { text-align: center; padding: 15px; border-radius: 4px; font-size: 18px; margin-bottom: 20px; }");
-        out.println(".success { background-color: #d4edda; color: #155724; }");
-        out.println(".error { background-color: #f8d7da; color: #721c24; }");
-        out.println(".buttons { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }");
-        out.println("a { display: inline-block; padding: 12px 24px; background: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 4px; transition: background 0.3s; }");
+        out.println("body { font-family: 'Roboto', sans-serif;font-variant:small-caps; background-color: #e9ecef; margin: 0; padding: 20px; }");
+        out.println("h1 { text-align: center;font-variant:small-caps; color: #495057; margin-bottom: 20px; }");
+        out.println(".container { max-width: 600px; font-variant:small-caps;margin: auto; padding: 20px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }");
+        out.println(".message { text-align: center;font-variant:small-caps; padding: 15px; border-radius: 4px; font-size: 18px; margin-bottom: 20px; }");
+        out.println(".success { background-color: #d4edda;font-variant:small-caps; color: #155724; }");
+        out.println(".error { background-color: #f8d7da;font-variant:small-caps; color: #721c24; }");
+        out.println(".buttons { display: flex;font-variant:small-caps; justify-content: center; gap: 15px; margin-top: 20px; }");
+        out.println("a { display: inline-block;font-variant:small-caps; padding: 12px 24px; background: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 4px; transition: background 0.3s; }");
         out.println("a:hover { background: #0056b3; }");
         out.println("</style>");
         out.println("</head><body>");
